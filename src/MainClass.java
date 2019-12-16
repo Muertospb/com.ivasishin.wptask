@@ -5,7 +5,7 @@ import java.util.*;
 
 public class MainClass {
     private File file = new File("resources/wp.txt");
-    private List<String> strings;
+    List<String> strings;
     //    Здесь задается слово для подсчета задания 1
     private String word = "the";
     //    Здесь задается количество букв для задания 2
@@ -96,7 +96,7 @@ public class MainClass {
     }
 
 
-    private ArrayList<Map.Entry<String, Integer>> getTreeMap(HashMap<String, Integer> map) {
+    ArrayList<Map.Entry<String, Integer>> getTreeMap(Map<String, Integer> map) {
         ArrayList<Map.Entry<String, Integer>> listOfEntries = new ArrayList<>();
 
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
@@ -120,7 +120,7 @@ public class MainClass {
         return map;
     }
 
-    private HashMap<String, Integer> getMap(List<String> list) {
+    HashMap<String, Integer> getMap(List<String> list) {
         HashMap<String, Integer> map = new HashMap<>();
         for (String s : list) {
             if (s.length() > 0) {
@@ -134,7 +134,7 @@ public class MainClass {
         return map;
     }
 
-    private ArrayList<String> getWords(List<String> list) {
+    ArrayList<String> getWords(List<String> list) {
         ArrayList<String> arrayList = new ArrayList<>();
         for (String s : list) {
             String[] array = s.split(" ");
